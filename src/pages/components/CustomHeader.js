@@ -1,4 +1,4 @@
-import { Link, navigate } from "gatsby"
+import { Link } from "gatsby"
 import React from "react"
 
 import * as headerStyles from "../../styles/header.module.scss"
