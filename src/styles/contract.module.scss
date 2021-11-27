@@ -1,0 +1,33 @@
+.contract {
+  background-color: #252525;
+  color: #cfcfc9;
+  padding: 10rem 0;
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  h1 {
+    animation: moveInBottom 1s ease-in;
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.contract_link {
+  color: darkgray;
+}

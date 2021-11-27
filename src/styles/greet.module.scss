@@ -1,0 +1,32 @@
+.greet {
+  background-color: #252525;
+  color: #cfcfc9;
+  padding: 10rem 0;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.para {
+  margin-top: 2rem;
+  color: #777;
+}
+
+.iy {
+  font-size: 3rem;
+  animation: moveInBottom 1s ease-in;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

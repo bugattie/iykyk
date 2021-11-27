@@ -1,0 +1,161 @@
+.header {
+  position: relative;
+  height: 100vh;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_item {
+  font-size: 1.6rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    transform: scaleY(0);
+    background-color: #fff;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
+  }
+
+  &:hover:before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  & {
+    position: relative;
+  }
+}
+
+.nav__link:link,
+.nav__link:visited {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  text-decoration: none;
+  display: block;
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s;
+
+  &:hover {
+    color: #000 !important;
+  }
+}
+
+.text_box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading_primary {
+  color: #fff;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.heading_main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  animation: moveInLeft 1s ease-in;
+}
+
+.heading_sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.8rem;
+  animation: moveInRight 1s ease-in;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.myBtn {
+  display: block;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  width: 20rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+}
+
+.btn_animated {
+  animation: moveInBottom 0.5s ease-in 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.twitter {
+  margin-right: 2rem;
+}
+
+.twitter,
+.telegram {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.2rem;
+  border-radius: 20%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.custom_img {
+  margin-top: 3rem;
+}

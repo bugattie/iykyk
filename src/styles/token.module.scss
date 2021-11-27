@@ -1,0 +1,48 @@
+.token {
+  padding: 10rem 0;
+}
+
+.custom_flex {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom_span {
+  width: 7rem;
+  height: 7rem;
+  background-color: #fff !important;
+  padding: 1rem;
+  border-radius: 20%;
+}
+.eco {
+  animation: moveInBottom 1s ease-in;
+}
+
+.token_head {
+  font-size: 2.5rem;
+  animation: moveInBottom 1s ease-in;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.token_desc {
+  font-size: 1.7rem;
+  letter-spacing: 0.2rem;
+}
